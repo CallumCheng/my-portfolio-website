@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ common.first_name }} {{ common.last_name }}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--fonts-->
+
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'css/base.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/home.js') }}"></script>
+
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+<div class="navbar-ul">
+    <ul id="navbar-list" class="list-inline">
+        <li><a class="navbar-ref" href="/">Home</a></li>
+        <li><a class="navbar-ref" href="/projects">Projects</a></li>
+        <li><a class="navbar-ref" href="/contact">Contact Me</a></li>
+    </ul>
+</div>
+{% block body %}
+{% endblock %}
+</body>
+</html>
